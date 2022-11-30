@@ -7,6 +7,8 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import BackTopBtn from './components/BackButton'
+import './App.css'
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Skill />
       <Contact/>
       <Footer />
+      <BackTopBtn/>
     
     </div>
   )

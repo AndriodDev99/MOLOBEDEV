@@ -2,7 +2,7 @@ import { Button } from 'bootstrap'
 import React from 'react'
 import Typical from 'react-typical'
 import './Profile.css';
-
+import Contact from './Contact'
 
 export default function Profile() {
     return (
@@ -13,7 +13,7 @@ export default function Profile() {
                     <div className='colz'>
                         <div className='colz-icon'>
                         <a href='+27614697684'>
-                            <i class="fa fa-phone"></i>
+                            <i  className="fa fa-phone"></i>
                         </a>
                         <a href='https://www.linkedin.com/in/Faith-Nyayi'>
                             <i class="fa fa-linkedin"></i>
@@ -53,10 +53,10 @@ export default function Profile() {
                         </span>
                     </div>
                     <div className='profile-options'>
-                    <button className='btn primary-btn cursor-pointer'>
+                   <a href={Contact}> <button className='btn primary-btn cursor-pointer'>
                             {''}
                             Work With Me{''}
-                        </button>
+                        </button></a>
                         <a href='FAITHRESUME.pdf' download='Faith Nyayi.pdf'>
                             <button className='btn highlighted-btn'>Get Resume</button>
                         </a>

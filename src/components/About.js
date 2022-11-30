@@ -1,41 +1,27 @@
-import React from 'react'
-import Line from './LineGradient/Line'
-import { motion } from 'framer-motion'
+import React from 'react';
+
+// import img
+import Image from '../assets/img/faith.png';
 
 const About = () => {
   return (
-    <section className="section" name="Bio">
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-24">
-          <div className="flex flex-col p-8 items-center text-center lg:items-start lg:text-left">
-            <div className="flex flex-col">
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
-                transition={{ duration: 0.5 }}
-                variants={{
-                  hidden: { opacity: 0, x: -50 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-              >
-                <p className="text-4xl lg:text-4xl text-center font-medium lg:font-extrabold mb-3 before:content-about relative before:absolute before:opacity-40 before:-top-[2rem] before:hidden before:lg:block">
-                  About Faith Nyayi
-                </p>
-                <Line width="mx-auto w-2/5" />
-              </motion.div>
-              <hr className="mb-8 opacity-5" />
-              <motion.div
-                className="md:w-11/12 md:text-left"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false, amount: 0.5 }}
-                transition={{ duration: 0.5 }}
-                variants={{
-                  hidden: { opacity: 0, x: 50 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-              >
+    <section className='section ' name='Bio'>
+      <div className='container mx-auto'>
+        <div className='flex flex-col xl:flex-row gap-24'>
+          <img
+            className='object-cover h-screen w-[566px] md:mx-auto lg:mx-0 rounded-2xl'
+            src={Image}
+            alt=''
+          />
+          <div className='flex flex-col items-center text-center lg:items-start lg:text-left'>
+            <div className='flex flex-col'>
+              <h2 className='text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 before:content-about relative before:absolute before:opacity-40 before:-top-[2rem] before:hidden before:lg:block'>
+                Faith Nyai
+              </h2>
+              <p className='mb-4 text-accent'>
+                Entrepreneur
+              </p>
+              <hr className='mb-8 opacity-5' />
               <p className="mb-8">
                 Record of bringing cultural transformations, driving
                 organisational development, and building high-performance work
@@ -60,13 +46,12 @@ const About = () => {
                 expertise in budgeting, operational plannning, quality
                 assurance, training material creation, and audits execution.
               </p>
-              </motion.div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
